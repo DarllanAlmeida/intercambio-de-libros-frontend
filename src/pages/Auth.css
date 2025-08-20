@@ -1,0 +1,96 @@
+/* Estilos generales para la página de login */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f5e0; /* Fondo suave */
+  font-family: 'Arial', sans-serif;
+}
+
+.auth-form {
+  background-color: white;
+  padding: 30px;  /* Reducimos el padding para una caja más pequeña */
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px;  /* Reducimos el ancho máximo del formulario */
+  text-align: center;
+}
+
+.auth-form h2 {
+  font-size: 2.2em;  /* Reducimos el tamaño del título */
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 10px;  /* Reducimos el padding para los inputs */
+  margin: 10px 0;  /* Reducimos el margen entre los inputs */
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1em;  /* Reducimos el tamaño de la fuente */
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+
+.auth-form input:focus {
+  border: 1px solid #ffd700; /* Cambio de borde a amarillo cuando se enfoca el input */
+  outline: none;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 12px;  /* Reducimos el padding del botón */
+  background-color: #ffd700; /* Fondo amarillo brillante */
+  color: #333;
+  font-size: 1.1em;  /* Reducimos el tamaño de la fuente del botón */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.auth-form button:hover {
+  background-color: #e6b800; /* Fondo amarillo más oscuro al pasar el cursor */
+  transform: translateY(-5px); /* Efecto de elevación */
+}
+
+.auth-form button:active {
+  transform: translateY(0); /* Vuelve a la posición original cuando se hace clic */
+}
+
+.auth-form .error {
+  color: #f44336; /* Rojo para el mensaje de error */
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+/* Añadir emoticono al mensaje de error */
+.auth-form .error::before {
+  content: "❌ "; /* Emoticono de error */
+  font-size: 1.5em;
+}
+
+/* Estilos responsivos */
+@media (max-width: 480px) {
+  .auth-form {
+    padding: 20px;
+    max-width: 300px; /* Ajustamos el tamaño para dispositivos móviles */
+  }
+
+  .auth-form h2 {
+    font-size: 1.8em; /* Reducimos el tamaño del título en pantallas pequeñas */
+  }
+
+  .auth-form input {
+    padding: 8px; /* Reducimos el padding para los inputs en pantallas pequeñas */
+  }
+
+  .auth-form button {
+    padding: 10px; /* Reducimos el padding del botón en pantallas pequeñas */
+    font-size: 1em; /* Reducimos el tamaño de la fuente del botón en pantallas pequeñas */
+  }
+}

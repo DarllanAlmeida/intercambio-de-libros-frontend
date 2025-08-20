@@ -1,0 +1,228 @@
+/* Contenedor principal de la landing page */
+.landing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f5e0; /* Fondo suave */
+  padding: 20px;
+  flex-direction: column;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Sección de información */
+.landing-info {
+  max-width: 500px;
+  margin-bottom: 30px;
+  padding: 0 15px; /* Añadir padding para que no se vea pegado a los bordes en móviles */
+}
+
+.landing-info h1 {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.landing-info h1 span {
+  font-size: 1.2em;
+  color: #ffd700; /* Color amarillo para el emoticono */
+}
+
+.landing-info p {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.landing-info ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 40px;
+  text-align: left; /* Alinear texto de la lista a la izquierda */
+}
+
+.landing-info ul li {
+  margin: 12px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.landing-info ul li::before {
+  content: "📚"; /* Icono de libros */
+  font-size: 1.5em;
+}
+
+/* Sección de botones de autenticación */
+.landing-auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px; /* Espacio entre botones */
+}
+
+.landing-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.landing-buttons button {
+  background-color: #ffd700; /* Fondo amarillo */
+  color: #333;
+  font-size: 1em;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px; /* Bordes redondeados */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.landing-buttons button:hover {
+  background-color: #e6b800; /* Fondo más oscuro al pasar el cursor */
+  transform: translateY(-5px);
+}
+
+.landing-buttons button:active {
+  transform: translateY(0); /* Vuelve a la posición original cuando se hace clic */
+}
+
+.landing-buttons a {
+  text-decoration: none;
+}
+
+/* Separar los botones con un margen adicional en el primer botón */
+.landing-buttons a:first-child button {
+  margin-bottom: 25px;
+}
+
+/* Emoticonos en la lista de beneficios */
+.landing-info ul li:nth-child(1)::before {
+  content: "📚"; /* Icono de libros */
+}
+
+.landing-info ul li:nth-child(2)::before {
+  content: "🔄"; /* Icono de intercambio */
+}
+
+.landing-info ul li:nth-child(3)::before {
+  content: "👥"; /* Icono de personas */
+}
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  /* Reducir tamaños de fuente y ajustar el layout */
+  .landing-info h1 {
+    font-size: 2.5em;
+  }
+
+  .landing-info p {
+    font-size: 1.1em;
+  }
+
+  .landing-info ul {
+    font-size: 1.1em;
+  }
+
+  .landing-buttons button {
+    font-size: 0.9em;
+    padding: 10px 20px;
+    width: 180px;
+  }
+
+  .landing-buttons {
+    gap: 1rem;
+  }
+
+  .landing-info ul li {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes para pantallas de teléfonos móviles pequeños */
+  .landing-container {
+    padding: 10px;
+  }
+
+  .landing-info h1 {
+    font-size: 2.2em;
+  }
+
+  .landing-info p {
+    font-size: 1em;
+  }
+
+  .landing-info ul {
+    font-size: 1em;
+  }
+
+  .landing-info ul li {
+    font-size: 0.9em;
+  }
+
+  .landing-buttons button {
+    font-size: 0.8em;
+    padding: 10px 15px;
+    width: 160px;
+  }
+
+  .landing-buttons {
+    gap: 0.8rem;
+  }
+
+  .landing-info {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .landing-info ul {
+    padding-left: 10px;
+  }
+}
+
+/* Media query para dispositivos móviles con pantallas pequeñas */
+@media (max-width: 375px) {
+  /* Ajustamos aún más los textos y espaciados */
+  .landing-info h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+
+  .landing-info p {
+    font-size: 0.9em;
+  }
+
+  .landing-info ul {
+    font-size: 0.9em;
+    margin-bottom: 25px;
+  }
+
+  .landing-info ul li {
+    font-size: 0.85em;
+  }
+
+  .landing-buttons button {
+    font-size: 0.75em;
+    padding: 10px 15px;
+    width: 150px;
+  }
+
+  .landing-buttons {
+    gap: 0.6rem;
+  }
+}

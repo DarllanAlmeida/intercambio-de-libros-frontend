@@ -1,0 +1,169 @@
+/* Contenedor principal de la página de intercambios */
+.intercambios-container {
+  padding: 1rem; /* Menos padding */
+  background-color: #f4f4f9;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  max-width: 1000px;
+  margin: 2rem auto 0;  /* Agregado margen superior para separar del borde */
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.intercambios-title {
+  text-align: center;
+  color: #00c853;
+  margin-bottom: 1rem;  /* Reducido para ajustarse más */
+  font-size: 1.6rem;  /* Texto más pequeño */
+  font-weight: 600;
+}
+
+/* Cargando y no hay intercambios */
+.loading, .no-intercambios {
+  text-align: center;
+  font-size: 1rem;
+  color: #aaa;
+  margin-top: 1.5rem;
+}
+
+/* Lista de intercambios */
+.intercambio-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Estilo de cada tarjeta de intercambio */
+.intercambio-card {
+  background-color: #ffffff;
+  padding: 0.8rem;  /* Reducido el padding */
+  border-radius: 10px;
+  margin-bottom: 1rem; /* Menos espacio entre tarjetas */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  max-height: 250px;  /* Menor altura */
+  overflow: hidden;
+}
+
+.intercambio-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.intercambio-info p {
+  margin: 0.2rem 0;  /* Menos margen */
+  font-size: 0.9rem;  /* Texto más pequeño */
+  color: #333;
+}
+
+.intercambio-status {
+  font-weight: bold;
+  padding: 0.3rem 0.8rem;  /* Menos padding */
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.85rem;  /* Texto más pequeño */
+}
+
+.intercambio-status.pendiente {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+.intercambio-status.completado {
+  background-color: #00c853;
+  color: #fff;
+}
+
+/* Estilos para los botones */
+.card-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 0.8rem;
+  gap: 0.5rem; /* Menos espacio entre botones */
+  flex-wrap: wrap;
+}
+
+.accept-btn,
+.reject-btn,
+.details-btn {
+  padding: 0.6rem 1.2rem; /* Botones más pequeños */
+  font-size: 0.9rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  color: white;
+  display: inline-block;
+  min-width: 100px; /* Botones más pequeños */
+}
+
+.accept-btn {
+  background-color: #4caf50;
+}
+
+.reject-btn {
+  background-color: #f44336;
+}
+
+.accept-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.reject-btn:hover {
+  background-color: #e53935;
+  transform: scale(1.05);
+}
+
+.details-btn {
+  background-color: #2962ff;
+  text-align: center;
+  padding: 0.6rem 1.2rem;
+}
+
+.details-btn:hover {
+  background-color: #0039cb;
+  transform: scale(1.05);
+}
+
+/* Estilos para dispositivos pequeños (responsive) */
+@media (max-width: 768px) {
+  .intercambio-card {
+    padding: 0.6rem; /* Reducido más el padding */
+  }
+
+  .intercambio-info p {
+    font-size: 0.85rem;  /* Texto aún más pequeño */
+  }
+
+  .intercambio-status {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .card-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .accept-btn,
+  .reject-btn,
+  .details-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Estilos para dispositivos más pequeños */
+@media (max-width: 480px) {
+  .intercambios-title {
+    font-size: 1.4rem;
+  }
+
+  .accept-btn,
+  .reject-btn,
+  .details-btn {
+    font-size: 0.85rem;
+    padding: 0.6rem 1.1rem;
+  }
+}

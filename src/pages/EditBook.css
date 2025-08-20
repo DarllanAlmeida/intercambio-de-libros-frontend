@@ -1,0 +1,81 @@
+.form-container {
+  max-width: 420px;
+  width: 90%;
+  margin: 50px auto;
+  padding: 30px 20px;
+  background-color: #1a1f2b; /* azul escuro */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.45);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e0e6f0; /* cinza claro */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.form-container h2 {
+  text-align: center;
+  color: #f39c12; /* laranja vibrante */
+  margin-bottom: 28px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border: 2px solid #34495e; /* cinza azulado */
+  border-radius: 8px;
+  background-color: #2c3e50; /* azul mais claro */
+  color: #e0e6f0;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-container input::placeholder {
+  color: #7f8c8d; /* cinza médio */
+  font-style: italic;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+  outline: none;
+  border-color: #f39c12; /* laranja vibrante */
+  background-color: #34495e;
+  color: #fff;
+}
+
+.form-container button {
+  padding: 14px 0;
+  background-color: #f39c12; /* laranja vibrante */
+  color: #1a1f2b; /* azul escuro para contraste */
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  user-select: none;
+}
+
+.form-container button:hover {
+  background-color: #d4880b; /* laranja mais escuro */
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    margin: 30px 15px;
+    padding: 25px 15px;
+    width: 95%;
+  }
+
+  .form-container button {
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+}

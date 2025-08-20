@@ -1,0 +1,328 @@
+/* Contenedor principal de la página de inicio */
+.home-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f5e0; /* Fondo suave */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Bienvenida personalizada */
+.welcome-msg {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #2F4F4F;
+}
+
+
+.welcome-sub {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Sección de estadísticas */
+.stats-container {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  flex: 1;
+  background: #f1f8e9;
+  padding: 1.2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.stat-card h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #2e7d32;
+}
+
+.stat-card p {
+  margin: 0.3rem 0 0;
+  color: #555;
+}
+
+/* Contenedor de acciones principales */
+.home-actions {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Botón de agregar libro */
+.add-book-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.4);
+}
+
+.add-book-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(33, 136, 56, 0.6);
+}
+
+/* Botón de ver intercambios */
+.exchange-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2962ff;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(41, 98, 255, 0.4);
+}
+
+.exchange-btn:hover {
+  background-color: #0039cb;
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 57, 203, 0.6);
+}
+
+/* Contenedor de búsqueda */
+.search-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.search-container input,
+.search-container select {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 2px solid #C6E2B3;
+  flex: 1;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+.search-container input:focus,
+.search-container select:focus {
+  border-color: #ff7f50;
+  box-shadow: 0 0 8px #ff7f50;
+}
+
+/* Estilos de la lista de libros */
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Estilos de las tarjetas de libros */
+.book-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(255, 127, 80, 0.3);
+}
+
+/* Estilo para la información del libro */
+.book-info p {
+  margin: 6px 0;
+  color: #3B3B3B;
+  font-size: 1rem;
+}
+
+.book-title {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #2F4F4F;
+}
+
+.book-author,
+.book-genre {
+  color: #555555;
+  font-style: italic;
+}
+
+/* Estados de libro */
+.book-status.disponible {
+  color: #28a745;
+  font-weight: 700;
+}
+
+.book-status.intercambiado {
+  color: #ff7f50;
+  font-weight: 700;
+}
+
+.book-status.reservado {
+  color: #d9534f;
+  font-weight: 700;
+}
+
+/* Estados de intercambio */
+.book-status.pendiente {
+  color: #f39c12;
+  font-weight: 700;
+}
+
+.book-status.aceptado {
+  color: #27ae60;
+  font-weight: 700;
+}
+
+.book-status.rechazado {
+  color: #c0392b;
+  font-weight: 700;
+}
+
+/* Estilo para los botones de la tarjeta */
+.card-buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.edit-btn,
+.delete-btn {
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #28a745;
+  color: white;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.5);
+  text-decoration: none;
+}
+
+.edit-btn:hover {
+  background-color: #218838;
+  box-shadow: 0 6px 16px rgba(33, 136, 56, 0.7);
+}
+
+.delete-btn {
+  background-color: #ff7f50;
+  color: white;
+  box-shadow: 0 4px 12px rgba(255, 127, 80, 0.5);
+}
+
+.delete-btn:hover {
+  background-color: #e76b3a;
+  box-shadow: 0 6px 16px rgba(231, 107, 58, 0.7);
+}
+
+/* Estilo para el texto de carga */
+.loading {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 60px;
+  color: #2F4F4F;
+}
+
+/* Emoticonos en el título y estado */
+.book-title::before {
+  content: "📚 ";
+  font-size: 1.2em;
+}
+
+.book-status.disponible::before {
+  content: "✅ ";
+  font-size: 1.2em;
+}
+
+.book-status.intercambiado::before {
+  content: "🔁 ";
+  font-size: 1.2em;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  /* Ajustamos el contenedor */
+  .home-container {
+    padding: 15px;
+  }
+
+  /* Texto de bienvenida */
+  .welcome-msg {
+    font-size: 1.4rem;
+  }
+
+  /* Sección de estadísticas */
+  .stats-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stat-card {
+    margin-bottom: 1rem;
+  }
+
+  /* Búsqueda */
+  .search-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-container input,
+  .search-container select {
+    min-width: 100%;
+  }
+
+  /* Botones */
+  .action-btn {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 20px;
+  }
+
+  /* Lista de libros */
+  .book-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* Tarjetas de libros */
+  .book-card {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  /* Botones de la tarjeta */
+  .card-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  /* Títulos y textos de libros */
+  .book-title {
+    font-size: 1.1rem;
+  }
+
+  .book-info p {
+    font-size: 0.9rem;
+  }
+}
