@@ -31,7 +31,7 @@
 - ## Capturas de Pantalla
 
 ### Pantalla de Inicio
-![Pantalla de Inicio](screenshots/foto-gestion.png)
+![Pantalla de Inicio](public/screenshots/foto-gestion.png)
 
 ### Gestión de Libros
-![Gestión de Libros](screenshots/foto-inicio.png)
+![Gestión de Libros](public/screenshots/foto-inicio.png)
