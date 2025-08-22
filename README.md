@@ -26,4 +26,12 @@
 - **JWT (JSON Web Tokens)** con Passport.js para autenticación  
 
 ### Base de Datos
-- **PostgreSQL** o **MySQL** mediante TypeORM  
+- **PostgreSQL** o **MySQL** mediante TypeORM
+
+- ## Capturas de Pantalla
+
+### Pantalla de Inicio
+![Pantalla de Inicio](screenshots/foto1.png)
+
+### Gestión de Libros
+![Gestión de Libros](screenshots/foto2.png)
