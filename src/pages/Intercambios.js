@@ -15,7 +15,7 @@ const Intercambios = () => {
   const fetchIntercambios = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('/intercambios');
+      const response = await axios.get('/intercambio');
       setIntercambios(response.data);
     } catch (error) {
       toast.error('Error al cargar intercambios');
@@ -27,7 +27,7 @@ const Intercambios = () => {
 
   const handleAccept = async (id) => {
     try {
-      await axios.patch(`/intercambios/${id}/aceptar`);
+      await axios.patch(`/intercambio/${id}/aceptar`);
       setIntercambios(intercambios.map(item => 
         item.id === id ? { ...item, estado: 'aceptado' } : item
       ));
@@ -40,7 +40,7 @@ const Intercambios = () => {
 
   const handleReject = async (id) => {
     try {
-      await axios.patch(`/intercambios/${id}/rechazar`);
+      await axios.patch(`/intercambio/${id}/rechazar`);
       setIntercambios(intercambios.map(item => 
         item.id === id ? { ...item, estado: 'rechazado' } : item
       ));
@@ -52,15 +52,15 @@ const Intercambios = () => {
   };
 
   return (
-    <div className="intercambios-container">
+    <div className="intercambio-container">
       <ToastContainer position="top-right" autoClose={3000} />
 
-      <h2 className="intercambios-title">🔄 Intercambios</h2>
+      <h2 className="intercambio-title">🔄 Intercambios</h2>
 
       {loading ? (
         <p className="loading">Cargando intercambios...</p>
       ) : intercambios.length === 0 ? (
-        <p className="no-intercambios">No hay intercambios activos.</p>
+        <p className="no-intercambio">No hay intercambios activos.</p>
       ) : (
         <ul className="intercambio-list">
           {intercambios.map(intercambio => (

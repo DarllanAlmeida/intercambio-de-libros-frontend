@@ -20,7 +20,7 @@ const AddBook = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      await axios.post('/libros', formData);
+      await axios.post('/libro', formData);
       alert('Libro agregado con éxito!');
       navigate('/inicio');  // Redirigir a listado tras agregar
     } catch (error) {

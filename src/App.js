@@ -20,7 +20,7 @@ function App() {
     if (token) {
       api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
       api
-        .get("/libros")
+        .get("/libro")
         .then((res) => setBooks(res.data))
         .catch((err) => console.error("Error al obtener libros:", err));
     }
@@ -58,7 +58,7 @@ function App() {
           }
         />
         <Route
-          path="/intercambios"
+          path="/intercambio"
           element={
             <ProtectedRoute>
               <Intercambios />
