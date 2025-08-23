@@ -28,6 +28,21 @@
 ### Base de Datos
 - **PostgreSQL** o **MySQL** mediante TypeORM
 
+- ## 🔹 Sobre este proyecto
+
+**Mi rol en el proyecto:**
+- Desarrollador fullstack: implementé tanto el frontend con React como el backend con NestJS.  
+- Diseñé la lógica de gestión de libros y de solicitudes de intercambio.  
+- Implementé autenticación segura usando JWT y control de acceso a colecciones privadas.  
+- Construí una interfaz moderna y responsiva para mejorar la experiencia del usuario.  
+
+**Aprendizajes clave:**
+- Manejo de **estado en React** usando Hooks y comunicación con el backend mediante Axios.  
+- Desarrollo de **APIs RESTful** con NestJS y TypeORM.  
+- Integración de **autenticación y autorización** segura con JWT y Passport.js.  
+- Organización de un proyecto fullstack con frontend y backend separados.  
+- Buenas prácticas de documentación y control de versiones con Git y GitHub.  
+
 - ## Capturas de Pantalla
 
 ### Pantalla de Inicio
